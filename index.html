@@ -10,20 +10,36 @@
 </head>
 
 <body>
-    <div id = "game-title">Tic-Tac-Toe</div>
-    <div id="player-display-wrapper">
-        <div id="player-1">
-            <p class="name">Player 1</p>
-            <p class='icon'></p>
-        </div>
-        <div id="player-2">
-            <p class="name">Player 2</p>
-            <p class='icon'></p>
+    <div id="game-title">
+        <h1>Star Wars</h1>
+        <h3>Tic-Tac-Toe</h3>
+    </div>
+
+    <div id="player-1">
+        <p class="name">Player 1</p>
+        <p class='icon'><img src="icons/luke-skywalker/icons8-luke-skywalker-96.png" alt="" srcset=""></p>
+    </div>
+    <div id="player-2">
+        <p class="name">Player 2</p>
+        <p class='icon'><img src="icons/darth-vader/icons8-darth-vader-96.png" alt="" srcset=""></p>
+    </div>
+    <div id="border">
+        <div id='grid'>
+
         </div>
     </div>
-    <div id = 'grid'>
-        <div>1</div>
-    </div>
+    
+    <audio id="theme-song">
+        <source src='http://www.digitpress.com/dpsoundz/mp3/dp_starwars.mp3'>
+    </audio>
+    <audio id="darkside-audio">
+        <source src="http://www.digitpress.com/dpsoundz/mp3/dp_starwars_darkside.mp3">
+    </audio>
+    <audio id="lightside-audio">
+        <source src="http://www.digitpress.com/dpsoundz/mp3/dp_starwars_theme.mp3">
+    </audio>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
