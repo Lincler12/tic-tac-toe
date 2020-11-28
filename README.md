@@ -1,0 +1,1 @@
+A project to implement with js using factory constructors and objects
