@@ -1,0 +1,54 @@
+* {
+    --charcoal: hsla(197, 37%, 24%, 1);
+    --persian-green: hsla(173, 58%, 39%, 1);
+    --orange-yellow-crayola: hsla(43, 74%, 66%, 1);
+    --sandy-brown: hsla(27, 87%, 67%, 1);
+    --burnt-sienna: hsla(12, 76%, 61%, 1);
+}
+
+html, body{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    background-color: var(--orange-yellow-crayola);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div#game-title{
+    font-size: 7rem;
+    font-weight: 900;
+    color: var(--burnt-sienna);
+    text-align: center;
+    margin-top: 10vh;
+}
+
+div#player-display-wrapper{
+    width: 100%;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    color: var(--persian-green);
+}
+
+div#player-1{
+    margin-right: 40%;
+}
+
+div#grid{
+    position: absolute;
+    top: 30%;
+    justify-self: center;
+    align-self: center;
+    width: 75rem;
+    height: 75rem;
+    display:grid;
+}
