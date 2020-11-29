@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
     height: 100%;
     width: 100vw;
-    background-color: cornsilk;
+    background-color: var(--charcoal);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -28,7 +28,7 @@ div#game-title {
     grid-area: title;
     /* font-size: 7rem; */
     font-weight: 900;
-    color: var(--burnt-sienna);
+    color: var(--orange-yellow-crayola);
 
     /* margin-top: 10vh; */
 }
@@ -47,7 +47,7 @@ div#player-1 {
     font-size: 5rem;
     font-weight: 900;
     letter-spacing: 0.2rem;
-    color: var(--charcoal);
+    color: var(--burnt-sienna);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -63,7 +63,7 @@ div#player-2 {
     font-size: 5rem;
     font-weight: 900;
     letter-spacing: 0.2rem;
-    color: var(--charcoal);
+    color: var(--burnt-sienna);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,7 +74,7 @@ div#player-2 {
 div#border {
     width: 50rem;
     height: 50rem;
-    background-color: var(--persian-green);
+    background-color: var(--charcoal);
 }
 
 div#grid {
@@ -93,7 +93,7 @@ div#grid {
 }
 
 div#grid div {
-    background-color: cornsilk;
+    background-color: hsla(197, 37%, 35%, 1);
     width: 100%;
     height: 100%;
     display: flex;
@@ -103,4 +103,38 @@ div#grid div {
 }
 div#grid div:hover{
     filter: brightness(0.9);
+}
+
+div#modal{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
+    justify-content: center;
+    align-items: center;
+}
+
+div#modal-content{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange-yellow-crayola);
+    width: 50rem;
+    height: 25rem;
+}
+div#close{
+    position:absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+img#player-icon{
+    position: absolute;
+
+    left: 75px;
 }
