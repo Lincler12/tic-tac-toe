@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="shortcut icon" href="favicons/icons8-star-wars-48.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
@@ -13,6 +14,7 @@
     <div id="game-title">
         <h1>Star Wars</h1>
         <h3>Tic-Tac-Toe</h3>
+        <button id = 'sound'>sound <img id = 'sound-img'src="icons/sound-off/icons8-mute-24.png" alt="" srcset=""></button>
     </div>
 
     <div id="player-1">
@@ -32,7 +34,8 @@
         <div id = "modal-content">
             <div id = "close"><i>&times;</i></div>
             <img  id = 'player-icon' src="" alt="" srcset="">
-            <p>You won!</p>
+            <p id = 'win-message'>You won!</p>
+            <p id = 'quote'></p>
         </div>
     </div>
 
