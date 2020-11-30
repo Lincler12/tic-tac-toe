@@ -153,7 +153,7 @@ button#sound{
     width: 10rem;
     text-transform: capitalize;
     padding: 0.5rem 0.25rem;
-    position: absolute;
+    margin-bottom: 2rem;
     margin-top: 5rem;
     margin-left: 11rem;
 
