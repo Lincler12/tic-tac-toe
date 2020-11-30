@@ -10,6 +10,7 @@ html,
 body {
     position: relative;
     display: grid;
+    column-gap: 5rem;
     grid-template-rows: 2fr 6fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "title title title"
@@ -153,8 +154,8 @@ button#sound{
     text-transform: capitalize;
     padding: 0.5rem 0.25rem;
     position: absolute;
-    margin-top: 8rem;
-    margin-left: 10rem;
+    margin-top: 5rem;
+    margin-left: 11rem;
 
 }
 

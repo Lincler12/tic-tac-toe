@@ -9,14 +9,14 @@ const soundBoard = (() => {
     let firstTime = 0;
     let sound = false;
     song = new Audio();
-    
+
     const buttonElement = document.getElementById('sound');
     const soundImg = document.getElementById('sound-img');
     buttonElement.addEventListener('click', () => {
         if (soundImg.src.indexOf('icons8-mute-24.png') > -1) {
             soundImg.src = 'icons/sound-on/icons8-sound-24.png';
             sound = true;
-            if(!firstTime)
+            if (!firstTime)
                 setSong();
             firstTime++;
         } else {
@@ -37,7 +37,7 @@ const soundBoard = (() => {
                 song = lightsideSong;
                 break;
             }
-            default:{
+            default: {
                 song = themeSong;
             }
         }
@@ -118,10 +118,20 @@ const GameBoard = (() => {
         }
 
     };
+
+    const reset = function () {
+        gameBoard.forEach(cell => {
+            cell.dataset.player = '';
+            cell.removeChild(cell.firstChild);
+            const img = document.createElement('img');
+            cell.appendChild(img);
+        })
+    }
     return {
         gridElement: gridElement,
         gameBoard,
-        init: init
+        init,
+        reset
     };
 })();
 
@@ -153,7 +163,7 @@ function playerFactory(name, icon, music, winMessage, quote) {
 const Game = (() => {
     // GameBoard.init;
 
-    let winner = Player.NONE;
+    // let winner = Player.NONE;
     let turn = Player.FIRST;
     const totalRounds = 8;
     let round = 0;
@@ -175,6 +185,7 @@ const Game = (() => {
                     round++;
                     if (parseInt(checkWinner()) !== Player.NONE) {
                         console.log(checkWinner());
+
                         modal.displayYes(player1);
                     }
                 }
@@ -187,11 +198,22 @@ const Game = (() => {
                     if (parseInt(checkWinner()) !== Player.NONE) {
                         console.log(checkWinner());
                         modal.displayYes(player2);
+                       
+
                     }
                 }
                 break;
         }
     };
+
+    function reset() {
+        turn = Player.FIRST;
+        round = 0;
+        GameBoard.reset();
+
+    }
+    document.getElementById('close').addEventListener('click', reset);
+
 
     function checkWinner() {
         let winner = Player.NONE;
