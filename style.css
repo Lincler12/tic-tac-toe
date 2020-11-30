@@ -30,7 +30,7 @@ div#game-title {
     /* font-size: 7rem; */
     font-weight: 900;
     color: var(--orange-yellow-crayola);
-    
+
     position: relative;
     height: 100%;
     width: 100%;
@@ -42,13 +42,14 @@ div#game-title {
 
     /* margin-top: 10vh; */
 }
-h1{
+
+h1 {
     font-size: 7rem;
     letter-spacing: 3px;
     text-shadow: 1px 1px 5px var(--burnt-sienna);
 }
 
-h3{
+h3 {
     margin-left: 21rem;
 }
 
@@ -113,23 +114,30 @@ div#grid div {
     justify-content: center;
     cursor: pointer;
 }
-div#grid div:hover{
+
+div#grid div:hover {
     filter: brightness(0.9);
 }
 
-div#modal{
+div#modal {
     display: none;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
+    min-height: 100vh;
     height: 100%;
+    overflow-y: hidden;
     z-index: 1;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     justify-content: center;
     align-items: center;
+
 }
 
-div#modal-content{
-    position:relative;
+div#modal-content {
+    position: relative;
     display: flex;
     flex-direction: column;
 
@@ -140,22 +148,19 @@ div#modal-content{
     height: 25rem;
     font-size: large;
 }
-div#close{
-    position:absolute;
+
+div#close {
+    position: absolute;
     top: 1rem;
     right: 1.5rem;
     font-size: 3rem;
     cursor: pointer;
 }
 
-img#player-icon{
-   
+img#player-icon {}
 
-   
-}
-
-button#sound{
-    display:flex;
+button#sound {
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-size: large;
@@ -166,12 +171,12 @@ button#sound{
     padding: 0.5rem 0.25rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
-    
-    
+
+
 
 }
 
-p#quote{
+p#quote {
     width: 65%;
     text-align: center;
 }

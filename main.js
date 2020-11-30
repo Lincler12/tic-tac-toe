@@ -70,12 +70,13 @@ const modal = (() => {
     let contentIcon = document.getElementById('player-icon');
     let closeModalElement = document.getElementById('close');
     let quoteElement = document.getElementById('quote');
+    const bodyElement = document.querySelector('body');
     closeModalElement.addEventListener('click', () => {
         displayNo();
     })
 
     function displayYes(player) {
-        
+        bodyElement.style.overflow = 'hidden';
         modalElement.style.display = 'flex';
         if(player === Player.NONE){
          winMessageElement.textContent = `It's a tie! The battle continues...`   
@@ -89,7 +90,7 @@ const modal = (() => {
     }
 
     function displayNo() {
-
+        bodyElement.style.overflow = 'auto';
         modalElement.style.display = 'none';
         winMessageElement.textContent = '';
         quoteElement.textContent = '';
