@@ -75,7 +75,12 @@ const modal = (() => {
     })
 
     function displayYes(player) {
+        
         modalElement.style.display = 'flex';
+        if(player === Player.NONE){
+         winMessageElement.textContent = `It's a tie! The battle continues...`   
+         return;
+        }
         winMessageElement.textContent = player.winMessage;
         contentIcon.src = player.icon;
         quoteElement.textContent = player.quote;
@@ -84,7 +89,10 @@ const modal = (() => {
     }
 
     function displayNo() {
+
         modalElement.style.display = 'none';
+        winMessageElement.textContent = '';
+        quoteElement.textContent = '';
         contentIcon.src = '';
         soundBoard.stopSong();
 
@@ -175,6 +183,7 @@ const Game = (() => {
     function play(e) {
         if (round === totalRounds) {
             console.log("yay");
+            modal.displayYes(Player.NONE);
         }
 
         switch (turn) {
