@@ -30,16 +30,23 @@ div#game-title {
     /* font-size: 7rem; */
     font-weight: 900;
     color: var(--orange-yellow-crayola);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     /* margin-top: 10vh; */
 }
 h1{
     font-size: 7rem;
 }
-h3{
-    text-align: right;
-}
 
+h3{
+    margin-left: 21rem;
+}
 
 div#player-1 {
     justify-self: end;
@@ -153,9 +160,10 @@ button#sound{
     width: 10rem;
     text-transform: capitalize;
     padding: 0.5rem 0.25rem;
-    margin-bottom: 2rem;
-    margin-top: 5rem;
-    margin-left: 11rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    
+    
 
 }
 
