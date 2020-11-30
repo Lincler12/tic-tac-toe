@@ -87,7 +87,7 @@ div#border {
 }
 
 div#grid {
-
+    padding: 3rem;
     align-self: start;
     gap: 1rem;
     top: 30%;
