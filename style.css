@@ -30,6 +30,7 @@ div#game-title {
     /* font-size: 7rem; */
     font-weight: 900;
     color: var(--orange-yellow-crayola);
+    
     position: relative;
     height: 100%;
     width: 100%;
@@ -43,6 +44,8 @@ div#game-title {
 }
 h1{
     font-size: 7rem;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 5px var(--burnt-sienna);
 }
 
 h3{
